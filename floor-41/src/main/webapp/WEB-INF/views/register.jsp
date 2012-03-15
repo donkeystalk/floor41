@@ -15,6 +15,12 @@
 		<script type="text/javascript" src="<c:url value="/resources/js/jquery-1.7.1.min.js"/>"></script>
 	</head>
 	<body>
+		<c:if test="${not empty registerErrorMessage}">
+		<div class="error">
+			Registration Error: <br/>	
+			<c:out value="${registerErrorMessage}"/>
+		</div>
+		</c:if>
 		<div class="container">
 			<form:errors path="user" class="error" />
 			<form:form modelAttribute="user" action="register" method="post">
