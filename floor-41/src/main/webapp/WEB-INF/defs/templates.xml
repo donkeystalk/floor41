@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+  
+  <definition name=".base" template="/WEB-INF/templates/base.jsp">
+    <put-attribute name="pageTitle" value="Floor 41" type="string" />
+    <put-attribute name="imports" value="/WEB-INF/templates/imports.jsp" />
+    <put-attribute name="header" value="/WEB-INF/templates/headerWithLogin.jsp" />
+    <put-attribute name="menu" value="/WEB-INF/templates/menu.jsp" />
+    <put-attribute name="body" value="/WEB-INF/templates/body.jsp" />
+    <put-attribute name="footer" value="/WEB-INF/templates/footer.jsp" />
+  </definition>
+  
+  <!-- Just used for ajax calls to input html content -->
+  <definition name=".baseNoLogin" extends=".base">
+  	<put-attribute name="header" value="/WEB-INF/templates/headerNoLogin.jsp" />
+  </definition>
+  
+  <definition name="register" extends=".base">
+  	<put-attribute name="pageTitle" value="Floor-41 - Register" />
+  	<put-attribute name="body" value="/WEB-INF/views/register.jsp" />
+  </definition>
+  
+  <definition name="index" extends=".base">
+  	<put-attribute name="pageTitle" value="Floor-41" />
+  	<put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+  </definition>
+  
+  <definition name="login" extends=".base">
+  	<put-attribute name="pageTitle" value="Floor-41" />
+  	<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+  </definition>
+  
+</tiles-definitions>
