@@ -7,11 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.ForeignKey;
-
 
 @Entity
 @Table(name="user_experience")
@@ -28,10 +27,10 @@ public class UserExperience
 	private Date endDate;
 	private String username;
 	
-	@OneToOne(fetch=FetchType.EAGER)
-	@JoinColumn(name="job_category_id", updatable=false)
+	@OneToOne
+	@PrimaryKeyJoinColumn
 	private JobCategory jobCategory;
-
+	
 	public int getId() {
 		return id;
 	}

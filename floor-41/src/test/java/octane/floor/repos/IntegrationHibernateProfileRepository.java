@@ -34,9 +34,13 @@ public class IntegrationHibernateProfileRepository {
 	@Transactional
 	public void testInsertUserExperience()
 	{
-		UserExperience ue = createUserExperience("junitUser");
+		JobCategory jc = createJobCategory();
+		repo.insertJobCategory(jc);
+		UserExperience ue = createUserExperience("junitUser", jc);
 		repo.insertUserExperience(ue);
 		List<UserExperience> experience = repo.findUserExperienceByUsername("junitUser");
+		jc = repo.findJobCategoryById(1);
+		assertNotNull(jc);
 		assertNotNull(experience);
 		assertEquals(1, experience.size());
 	}
@@ -44,17 +48,15 @@ public class IntegrationHibernateProfileRepository {
 	private JobCategory createJobCategory()
 	{
 		JobCategory jc = new JobCategory();
-		jc.setId(2);
 		jc.setName("Java");
-		jc.setParentId(2);
 		return jc;
 	}
 	
-	private UserExperience createUserExperience(String username) {
+	private UserExperience createUserExperience(String username, JobCategory jc) {
 		UserExperience ue = new UserExperience();
 		ue.setStartDate(new Date());
-		ue.setJobCategory(createJobCategory());
 		ue.setEndDate(null);
+		ue.setJobCategory(jc);
 		ue.setLocation("Milwaukee");
 		ue.setStartDate(new Date());
 		ue.setTitle("Associate Developer Analyst");
