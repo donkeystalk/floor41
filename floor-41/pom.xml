@@ -11,6 +11,7 @@
   	<jackson.version>1.9.5</jackson.version>
   	<spring.security.version>3.0.7.RELEASE</spring.security.version>
 	<org.slf4j-version>1.5.10</org.slf4j-version>
+	<hibernate.version>3.6.8.Final</hibernate.version>
   </properties>
   
   <dependencies>
@@ -20,6 +21,13 @@
 	  <artifactId>spring-webmvc</artifactId>
 	  <version>${spring.version}</version>
 	</dependency>
+	<dependency>
+		<groupId>org.springframework</groupId>
+		<artifactId>spring-orm</artifactId>
+		<version>${spring.version}</version>
+	</dependency>
+	
+	<!-- Spring Security -->
 	<dependency>
 	  <groupId>org.springframework.security</groupId>
 	  <artifactId>spring-security-core</artifactId>
@@ -104,7 +112,29 @@
 		<artifactId>mysql-connector-java</artifactId>
 		<version>5.1.18</version>
 	</dependency>
-		
+	
+	<!-- Hibernate ORM -->
+	<dependency>
+	  <groupId>org.hibernate</groupId>
+	  <artifactId>hibernate-core</artifactId>
+	  <version>${hibernate.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.hibernate</groupId>
+	  <artifactId>hibernate-annotations</artifactId>
+	  <version>3.5.6-Final</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.hibernate</groupId>
+	  <artifactId>hibernate-commons-annotations</artifactId>
+	  <version>3.2.0.Final</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.javassist</groupId>
+	  <artifactId>javassist</artifactId>
+	  <version>3.15.0-GA</version>
+	</dependency>
+			
 	<!--  JSR 303 with Hibernate Validator -->
 	<dependency>
 		<groupId>javax.validation</groupId>
@@ -122,6 +152,12 @@
 		<groupId>log4j</groupId>
 		<artifactId>log4j</artifactId>
 		<version>1.2.16</version>
+	</dependency>
+	<dependency>
+		<groupId>org.slf4j</groupId>
+		<artifactId>slf4j-api</artifactId>
+		<version>${org.slf4j-version}</version>
+		<scope>runtime</scope>
 	</dependency>
 	<dependency>
 		<groupId>org.slf4j</groupId>

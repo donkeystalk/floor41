@@ -28,6 +28,7 @@
 		<property name="definitions">
 			<list>
 				<value>/WEB-INF/defs/templates.xml</value>
+				<value>/WEB-INF/defs/profile.xml</value>
 			</list>
 		</property>
 	</bean>

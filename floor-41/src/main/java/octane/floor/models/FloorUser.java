@@ -25,7 +25,7 @@ public class FloorUser implements UserDetails{
 	@Length(min=5, max=20)
 	private String password;
 	private String confirmPassword;
-	
+
 	public void setUsername(String username) {
 		this.username = username;
 	}

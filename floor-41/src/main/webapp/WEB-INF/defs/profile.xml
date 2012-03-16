@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+  <definition name="profile/index" extends=".base">
+  	<put-attribute name="pageTitle" value="Floor-41 - Profile" />
+  	<put-attribute name="body" value="/WEB-INF/profile/index.jsp" />
+  </definition>
+
+</tiles-definitions>
