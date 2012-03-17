@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+
+	<definition name=".adminBase" extends=".base">
+		<put-attribute name="pageTitle" value="Floor 41 - Admin"></put-attribute>
+	</definition>
+
+	<definition name="admin/index" extends=".adminBase">
+		<put-attribute name="body" value="/WEB-INF/admin/index.jsp" />
+	</definition>
+	
+</tiles-definitions>

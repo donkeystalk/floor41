@@ -32,6 +32,28 @@
 	  <groupId>org.springframework.security</groupId>
 	  <artifactId>spring-security-core</artifactId>
 	  <version>${spring.security.version}</version>
+		<exclusions>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-support</artifactId>
+			</exclusion>
+			<exclusion>
+				<groupId>commons-logging</groupId>
+				<artifactId>commons-logging</artifactId>
+			</exclusion>
+		</exclusions>
 	</dependency>
 	<dependency>
 	  <groupId>org.springframework.security</groupId>
@@ -47,6 +69,11 @@
 	  <groupId>org.springframework.security</groupId>
 	  <artifactId>spring-security-taglibs</artifactId>
 	  <version>${spring.security.version}</version>
+	</dependency>
+	<dependency>
+	  <groupId>cglib</groupId>
+	  <artifactId>cglib</artifactId>
+	  <version>2.2.2</version>
 	</dependency>
 	
 	<!-- JSTL -->
@@ -118,11 +145,6 @@
 	  <groupId>org.hibernate</groupId>
 	  <artifactId>hibernate-core</artifactId>
 	  <version>${hibernate.version}</version>
-	</dependency>
-	<dependency>
-	  <groupId>org.hibernate</groupId>
-	  <artifactId>hibernate-annotations</artifactId>
-	  <version>3.5.6-Final</version>
 	</dependency>
 	<dependency>
 	  <groupId>org.hibernate</groupId>

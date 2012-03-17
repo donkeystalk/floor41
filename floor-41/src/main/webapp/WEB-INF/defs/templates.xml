@@ -33,4 +33,10 @@
   	<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
   </definition>
   
+  <definition name="denied" extends=".base">
+  	<put-attribute name="pageTitle" value="Access Denied" />
+  	<put-attribute name="body" value="/WEB-INF/views/denied.jsp" />
+  </definition>
+
+  
 </tiles-definitions>
